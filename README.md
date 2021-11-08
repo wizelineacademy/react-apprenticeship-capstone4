@@ -27,13 +27,13 @@ We don’t want to limit you or bias your implementation by providing some demo 
 
 We provide the delivery dates to plan accordingly; please take this project seriously and try to make progress constantly. If you are struggling with something or get stuck at some point, please schedule a mentoring session to get help on time. Feel free to use the slack channel available.
 
-- [**Deliverable 1 - (Due Date: Monday, October 18th)**](#deliverable-1---due-date-monday-october-18th)
-- [**Deliverable 2 - (Due Date: Monday, October 25th)**](#deliverable-2---due-date-monday-october-25th)
-- [**Deliverable 3 - (Due Date: Monday, November 1st)**](#deliverable-3---due-date-monday-november-1st)
-- [**Deliverable 4 - (Due Date: Monday, November 8th)**](#deliverable-4---due-date-monday-november-8th)
-- **Final Deliverable - (Due Date: Monday, November 15th)**
+- [**Deliverable 1 - (Due Date: Monday, November 15th)**](#deliverable-1---due-date-monday-november-15th)
+- [**Deliverable 2 - (Due Date: Monday, November 22nd)**](#deliverable-2---due-date-monday-november-22nd)
+- [**Deliverable 3 - (Due Date: Monday, November 29th)**](#deliverable-3---due-date-monday-november-29th)
+- [**Deliverable 4 - (Due Date: Monday, December 6th)**](#deliverable-4---due-date-monday-december-6th)
+- **Final Deliverable - (Due Date: Monday, December 13th)**
 
-## Deliverable 1 - (Due Date: Monday, October 18th)
+## Deliverable 1 - (Due Date: Monday, November 15th)
 
 **Related topics**: React Fundamentals & CSS Styles in React
 
@@ -95,7 +95,7 @@ In this assignment, you will create the initial version of your Ecommerce Store.
 - Deploy your app into a hosting service such as Netlify, Firebase, Heroku, GitHub Pages, etc.
 - Fill <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3So94j4yoKcyPU1rDQvXweCdn59eoaGeD6tByPRgX_Osmnw/viewform">this Google Form</a> to submit your project before **October 18th at 8:00 AM (CST)**
 
-## Deliverable 2 - (Due Date: Monday, October 25th)
+## Deliverable 2 - (Due Date: Monday, November 22th)
 
 **Related topics:** React lifecycle & Hooks
 
@@ -165,7 +165,7 @@ In this assignment, you will continue working on your Ecommerce Store. It should
 - Deploy your app into a hosting service such as Netlify, Firebase, Heroku, GitHub Pages, etc.
 - Fill [this Google Form](https://docs.google.com/forms/d/e/1FAIpQLSc3So94j4yoKcyPU1rDQvXweCdn59eoaGeD6tByPRgX_Osmnw/viewform) to submit your project before **October 25th at 8:00 AM (CST)**
 
-## Deliverable 3 - (Due Date: Monday, November 1st)
+## Deliverable 3 - (Due Date: Monday, November 29th)
 
 **Related topics**: Fetching a Real API, React Router, Global State Management
 
@@ -297,7 +297,7 @@ In this assignment you will continue working on your Ecommerce Store. It should 
 - Deploy your app into a hosting service such as Netlify, Firebase, Heroku, GitHub Pages, etc.
 - Fill [this Google Form](https://docs.google.com/forms/d/e/1FAIpQLSc3So94j4yoKcyPU1rDQvXweCdn59eoaGeD6tByPRgX_Osmnw/viewform) to submit your project before **November 1st at 8:00 AM (CST)**
 
-## Deliverable 4 - (Due Date: Monday, November 8th)
+## Deliverable 4 - (Due Date: Monday, December 6th)
 
 **Related topics:** React Router, Global State Management, Design Patterns, Best Practices & Performance Optimizations
 
