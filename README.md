@@ -93,7 +93,7 @@ In this assignment, you will create the initial version of your Ecommerce Store.
 
 - Once you’ve covered all the <a href="#requirements">requirements specified above</a> and completed all the bullets on the <a href="#evaluation-criteria">Evaluation Criteria</a> section, push your changes to your branch and open a **PR** that can be merged into your **main** branch of your own GitHub repository.
 - Deploy your app into a hosting service such as Netlify, Firebase, Heroku, GitHub Pages, etc.
-- Fill <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3So94j4yoKcyPU1rDQvXweCdn59eoaGeD6tByPRgX_Osmnw/viewform">this Google Form</a> to submit your project before **October 18th at 8:00 AM (CST)**
+- Fill <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3So94j4yoKcyPU1rDQvXweCdn59eoaGeD6tByPRgX_Osmnw/viewform">this Google Form</a> to submit your project before **November 15th at 8:00 AM (CST)**
 
 ## Deliverable 2 - (Due Date: Monday, November 22nd)
 
@@ -163,7 +163,7 @@ In this assignment, you will continue working on your Ecommerce Store. It should
 
 - Once you’ve covered all the [requirements specified above](#requirements-1) and completed all the bullets on the [Evaluation Criteria](#evaluation-criteria-1) section, push your changes to your branch and **open a PR that can be merged into your main branch of your own GitHub repository**.
 - Deploy your app into a hosting service such as Netlify, Firebase, Heroku, GitHub Pages, etc.
-- Fill [this Google Form](https://docs.google.com/forms/d/e/1FAIpQLSc3So94j4yoKcyPU1rDQvXweCdn59eoaGeD6tByPRgX_Osmnw/viewform) to submit your project before **October 25th at 8:00 AM (CST)**
+- Fill [this Google Form](https://docs.google.com/forms/d/e/1FAIpQLSc3So94j4yoKcyPU1rDQvXweCdn59eoaGeD6tByPRgX_Osmnw/viewform) to submit your project before **November 22nd at 8:00 AM (CST)**
 
 ## Deliverable 3 - (Due Date: Monday, November 29th)
 
@@ -295,7 +295,7 @@ In this assignment you will continue working on your Ecommerce Store. It should 
 
 - Once you’ve covered all the requirements specified above and completed all the bullets on the Evaluation Criteria section, push your changes to your branch and open a PR that can be merged into your main branch of your own GitHub repository.
 - Deploy your app into a hosting service such as Netlify, Firebase, Heroku, GitHub Pages, etc.
-- Fill [this Google Form](https://docs.google.com/forms/d/e/1FAIpQLSc3So94j4yoKcyPU1rDQvXweCdn59eoaGeD6tByPRgX_Osmnw/viewform) to submit your project before **November 1st at 8:00 AM (CST)**
+- Fill [this Google Form](https://docs.google.com/forms/d/e/1FAIpQLSc3So94j4yoKcyPU1rDQvXweCdn59eoaGeD6tByPRgX_Osmnw/viewform) to submit your project before **November 29th at 8:00 AM (CST)**
 
 ## Deliverable 4 - (Due Date: Monday, December 6th)
 
@@ -377,4 +377,4 @@ In this assignment, you will continue working on your Ecommerce Store. It should
 
 - Once you’ve covered all the requirements specified above and completed all the bullets on the Evaluation Criteria section, push your changes to your branch and **open a PR that can be merged into your main branch of your own GitHub repository.**
 - Deploy your app into a hosting service such as Netlify, Firebase, Heroku, GitHub Pages, etc.
-- Fill [this Google](https://docs.google.com/forms/d/e/1FAIpQLSc3So94j4yoKcyPU1rDQvXweCdn59eoaGeD6tByPRgX_Osmnw/viewform) Form to submit your project before **November 8th at 8:00 AM (CST)**
+- Fill [this Google](https://docs.google.com/forms/d/e/1FAIpQLSc3So94j4yoKcyPU1rDQvXweCdn59eoaGeD6tByPRgX_Osmnw/viewform) Form to submit your project before **December 6th at 8:00 AM (CST)**
