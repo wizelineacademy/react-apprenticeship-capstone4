@@ -1,4 +1,4 @@
-# Wizeline Academy - React Bootcamp 2021/Q4
+# Wizeline Academy - React Bootcamp 2021/Q4 Internal
 
 ## Introduction
 
