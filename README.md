@@ -95,7 +95,7 @@ In this assignment, you will create the initial version of your Ecommerce Store.
 - Deploy your app into a hosting service such as Netlify, Firebase, Heroku, GitHub Pages, etc.
 - Fill <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3So94j4yoKcyPU1rDQvXweCdn59eoaGeD6tByPRgX_Osmnw/viewform">this Google Form</a> to submit your project before **October 18th at 8:00 AM (CST)**
 
-## Deliverable 2 - (Due Date: Monday, November 22th)
+## Deliverable 2 - (Due Date: Monday, November 22nd)
 
 **Related topics:** React lifecycle & Hooks
 
