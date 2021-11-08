@@ -44,7 +44,7 @@ In this assignment, you will create the initial version of your Ecommerce Store.
 ### Before you start
 
 <ol>
-  <li>Fork <a href="https://github.com/jparciga/wa-react-2021-q4-capstone-project">this repo</a> into your GitHub account
+  <li>Fork <a href="https://github.com/jparciga/wa-react-2021-q4-internal-capstone-project">this repo</a> into your GitHub account
   <li>Please make sure that your new repo is publicly accessible 
   <li>Create a new branch with the name <b>“feat/deliverable1”</b> derived from <b>main</b> on your forked repository
   <li>Start working on the requirements specified below
@@ -64,9 +64,9 @@ In this assignment, you will create the initial version of your Ecommerce Store.
   <li>
     Create the <b>Home Page</b> including the following blocks:
     <ul>
-      <li>2.1. A <b>Slider</b> to display the featured banners from <a href="https://github.com/jparciga/wa-react-2021-q4-capstone-project/blob/main/mocks/en-us/featured-banners.json">this mock file</a></li>
-      <li>2.2. A <b>Carousel</b> or <b>Grid</b> of the product categories from <a href="https://github.com/jparciga/wa-react-2021-q4-capstone-project/blob/main/mocks/en-us/product-categories.json">this mock file</a></li>
-      <li>2.3. A <b>Grid</b> of <b>Featured Products</b> from <a href="https://github.com/jparciga/wa-react-2021-q4-capstone-project/blob/main/mocks/en-us/featured-products.json">this mock file</a>. For each element on this grid, you should show at least the main image of the product, its name, category, and price.</li>
+      <li>2.1. A <b>Slider</b> to display the featured banners from <a href="https://github.com/jparciga/wa-react-2021-q4-internal-capstone-project/blob/main/mocks/en-us/featured-banners.json">this mock file</a></li>
+      <li>2.2. A <b>Carousel</b> or <b>Grid</b> of the product categories from <a href="https://github.com/jparciga/wa-react-2021-q4-internal-capstone-project/blob/main/mocks/en-us/product-categories.json">this mock file</a></li>
+      <li>2.3. A <b>Grid</b> of <b>Featured Products</b> from <a href="https://github.com/jparciga/wa-react-2021-q4-internal-capstone-project/blob/main/mocks/en-us/featured-products.json">this mock file</a>. For each element on this grid, you should show at least the main image of the product, its name, category, and price.</li>
     </ul>
   </li>
 </ol>
@@ -80,9 +80,9 @@ In this assignment, you will create the initial version of your Ecommerce Store.
 ### Evaluation Criteria
 
 - The Header is rendered correctly (25 points)
-- The Featured Banners Slider is rendered correctly using the data from <a href="https://github.com/jparciga/wa-react-2021-q4-capstone-project/blob/main/mocks/en-us/featured-banners.json">the mock file</a> (20 points)
-- The Categories Carousel/Grid is rendered correctly using the data from <a href="https://github.com/jparciga/wa-react-2021-q4-capstone-project/blob/main/mocks/en-us/product-categories.json">the mock file</a> (20 points)
-- The Featured Products Grid is rendered correctly using the data from <a href="https://github.com/jparciga/wa-react-2021-q4-capstone-project/blob/main/mocks/en-us/featured-products.json">the mock file</a> (30 points)
+- The Featured Banners Slider is rendered correctly using the data from <a href="https://github.com/jparciga/wa-react-2021-q4-internal-capstone-project/blob/main/mocks/en-us/featured-banners.json">the mock file</a> (20 points)
+- The Categories Carousel/Grid is rendered correctly using the data from <a href="https://github.com/jparciga/wa-react-2021-q4-internal-capstone-project/blob/main/mocks/en-us/product-categories.json">the mock file</a> (20 points)
+- The Featured Products Grid is rendered correctly using the data from <a href="https://github.com/jparciga/wa-react-2021-q4-internal-capstone-project/blob/main/mocks/en-us/featured-products.json">the mock file</a> (30 points)
 - The Footer is rendered correctly (5 points)
 
 ### Bonus
@@ -192,19 +192,19 @@ In this assignment you will continue working on your Ecommerce Store. It should 
 2. Update your **Home Page** according to the following requirements:
 
 - 2.1. The route for this page should be **/** and **/home**
-- 2.2. Refactor your **Featured Banners Slider** to fetch data from the API using [this custom hook](https://github.com/jparciga/wa-react-2021-q4-capstone-project/blob/main/src/utils/hooks/useFeaturedBanners.js).
+- 2.2. Refactor your **Featured Banners Slider** to fetch data from the API using [this custom hook](https://github.com/jparciga/wa-react-2021-q4-internal-capstone-project/blob/main/src/utils/hooks/useFeaturedBanners.js).
 - 2.3. Refactor your **Product Categories Carousel** or **Grid** according to the following requirements:
 - 2.3.1. Fetch data from this endpoint:
   https://wizeline-academy.cdn.prismic.io/api/v2/documents/search?ref={apiRef}&q=%5B%5Bat(document.type%2C%20%22category%22)%5D%5D&lang=en-us&pageSize=30
 
-  **IMPORTANT:** You have to replace the **{apiRef}** on the query params of the URL with the latest value for this particular API. Please check [the sample custom hook](https://github.com/jparciga/wa-react-2021-q4-capstone-project/blob/main/src/utils/hooks/useFeaturedBanners.js) so you can implement something similar to fetch from this endpoint.
+  **IMPORTANT:** You have to replace the **{apiRef}** on the query params of the URL with the latest value for this particular API. Please check [the sample custom hook](https://github.com/jparciga/wa-react-2021-q4-internal-capstone-project/blob/main/src/utils/hooks/useFeaturedBanners.js) so you can implement something similar to fetch from this endpoint.
 
 - 2.3.2. Each category should have a link to the **Product List Page** including a query param in the URL to filter the products by that category.
 - 2.4. Refactor your **Featured Products Grid** according to the following requirements:
 - 2.4.1. Fetch data from this endpoint:
   https://wizeline-academy.cdn.prismic.io/api/v2/documents/search?ref={apiRef}&q=%5B%5Bat(document.type%2C%20%22product%22)%5D%5D&q=%5B%5Bat(document.tags%2C%20%5B%22Featured%22%5D)%5D%5D&lang=en-us&pageSize=16
 
-  **IMPORTANT:** You have to replace the **{apiRef}** on the query params of the URL with the latest value for this particular API. Please check [the sample custom hook](https://github.com/jparciga/wa-react-2021-q4-capstone-project/blob/main/src/utils/hooks/useFeaturedBanners.js) so you can implement something similar to fetch from this endpoint.
+  **IMPORTANT:** You have to replace the **{apiRef}** on the query params of the URL with the latest value for this particular API. Please check [the sample custom hook](https://github.com/jparciga/wa-react-2021-q4-internal-capstone-project/blob/main/src/utils/hooks/useFeaturedBanners.js) so you can implement something similar to fetch from this endpoint.
 
 - 2.4.2. Each element on this grid should have at least the main image of the product, its name, category, price, “Add to cart” button, and a link to its detail page.
 - 2.4.3. You should show 16 products maximum on this grid and it is not necessary to implement pagination controls.
@@ -216,7 +216,7 @@ In this assignment you will continue working on your Ecommerce Store. It should 
 - 3.2.1. Fetch data from this endpoint:
   https://wizeline-academy.cdn.prismic.io/api/v2/documents/search?ref={apiRef}&q=%5B%5Bat(document.type%2C%20%22category%22)%5D%5D&lang=en-us&pageSize=30
 
-  **IMPORTANT:** You have to replace the **{apiRef}** on the query params of the URL with the latest value for this particular API. Please check [the sample custom hook](https://github.com/jparciga/wa-react-2021-q4-capstone-project/blob/main/src/utils/hooks/useFeaturedBanners.js) so you can implement something similar to fetch from this endpoint.
+  **IMPORTANT:** You have to replace the **{apiRef}** on the query params of the URL with the latest value for this particular API. Please check [the sample custom hook](https://github.com/jparciga/wa-react-2021-q4-internal-capstone-project/blob/main/src/utils/hooks/useFeaturedBanners.js) so you can implement something similar to fetch from this endpoint.
 
 - 3.2.2. You should be able to filter your products by category according to the category [filtering behavior from the previous deliverable](#filtering-behavior).
 - 3.2.3. If there is a filter applied, you should show a “Clear filters” button that will remove all the active filters and update the grid to show all the products.
@@ -224,7 +224,7 @@ In this assignment you will continue working on your Ecommerce Store. It should 
 - 3.3.1. Fetch data from this endpoint:
   https://wizeline-academy.cdn.prismic.io/api/v2/documents/search?ref={apiRef}&q=%5B%5Bat(document.type%2C%20%22product%22)%5D%5D&lang=en-us&pageSize=12
 
-  **IMPORTANT:** You have to replace the **{apiRef}** on the query params of the URL with the latest value for this particular API. Please check [the sample custom hook](https://github.com/jparciga/wa-react-2021-q4-capstone-project/blob/main/src/utils/hooks/useFeaturedBanners.js) so you can implement something similar to fetch from this endpoint.
+  **IMPORTANT:** You have to replace the **{apiRef}** on the query params of the URL with the latest value for this particular API. Please check [the sample custom hook](https://github.com/jparciga/wa-react-2021-q4-internal-capstone-project/blob/main/src/utils/hooks/useFeaturedBanners.js) so you can implement something similar to fetch from this endpoint.
 
 - 3.3.2. Each element on this grid should have at least the main image of the product, its name, category, price, “Add to cart” button, and a link to its detail page.
 - 3.3.3. Create the Pagination Controls dynamically, you should show 12 products maximum per page.
@@ -235,7 +235,7 @@ In this assignment you will continue working on your Ecommerce Store. It should 
 - 4.2. Fetch data for the selected product from this endpoint:
   https://wizeline-academy.cdn.prismic.io/api/v2/documents/search?ref={apiRef}&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22{productId}%22%29+%5D%5D
 
-  **IMPORTANT:** You have to replace the **{apiRef}** on the query params of the URL with the latest value for this particular API and **{productId}** with the id of the selected product. Please check [the sample custom hook](https://github.com/jparciga/wa-react-2021-q4-capstone-project/blob/main/src/utils/hooks/useFeaturedBanners.js) so you can implement something similar to fetch from this endpoint.
+  **IMPORTANT:** You have to replace the **{apiRef}** on the query params of the URL with the latest value for this particular API and **{productId}** with the id of the selected product. Please check [the sample custom hook](https://github.com/jparciga/wa-react-2021-q4-internal-capstone-project/blob/main/src/utils/hooks/useFeaturedBanners.js) so you can implement something similar to fetch from this endpoint.
 
 - 4.3. This page should include the following blocks:
 - 4.3.1. A **Gallery** to display the images of the selected product. You can use [this library](https://codesandbox.io/s/modsk?file=/src/App.jsx) (or any other) and customize its appearance to match the look and feel of your application.
@@ -255,7 +255,7 @@ In this assignment you will continue working on your Ecommerce Store. It should 
 - 5.2. You can consume this endpoint to get the products matching your search term:
   https://wizeline-academy.cdn.prismic.io/api/v2/documents/search?ref={apiRef}&q=%5B%5Bat(document.type%2C%20%22product%22)%5D%5D&q=%5B%5Bfulltext(document%2C%20%22{searchTerm}%22)%5D%5D&lang=en-us&pageSize=20
 
-  **IMPORTANT:** You have to replace the **{apiRef}** on the query params of the URL with the latest value for this particular API and **{searchTerm}** with the search term that the user entered. Please check [the sample custom hook](https://github.com/jparciga/wa-react-2021-q4-capstone-project/blob/main/src/utils/hooks/useFeaturedBanners.js) so you can implement something similar to fetch from this endpoint.
+  **IMPORTANT:** You have to replace the **{apiRef}** on the query params of the URL with the latest value for this particular API and **{searchTerm}** with the search term that the user entered. Please check [the sample custom hook](https://github.com/jparciga/wa-react-2021-q4-internal-capstone-project/blob/main/src/utils/hooks/useFeaturedBanners.js) so you can implement something similar to fetch from this endpoint.
 
 - 5.3. This page should contain the following blocks:
 - 5.3.1. A **List** to display the products that match your search term. For each element on this grid, you should show at least the main image of the product, its name, category, price, short description, and “Add to Cart” button.
