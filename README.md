@@ -33,6 +33,15 @@ We provide the delivery dates to plan accordingly; please take this project seri
 - [**Deliverable 4**](#deliverable-4)
 - [**Final Deliverable**](#final-deliverable)
 
+### Submitting your Deliverable
+
+- Once you’ve covered all the requirements and completed all the bullets on the Evaluation Criteria section, push your changes to your branch and open a **PR** that can be merged into your **main** branch of your **own** GitHub repository.
+- Remember to add your mentor as reviewer
+- Deploy your app into a hosting service such as Netlify, Firebase, Heroku, GitHub Pages, etc.
+- Share the links of both your PR and your application to your mentor
+- Fill [the form](https://forms.gle/7Jz2uXMFYXfcU2428) to submit your project
+
+
 ## Deliverable 1
 
 **Related topics**: React Fundamentals & CSS Styles in React
@@ -89,11 +98,6 @@ In this assignment, you will create the initial version of your Ecommerce Store.
 
 - Unit Test to validate that the Ecommerce Store logo/name appears correctly in the Header. (10 points)
 
-### Submitting your Deliverable
-
-- Once you’ve covered all the <a href="#requirements">requirements specified above</a> and completed all the bullets on the <a href="#evaluation-criteria">Evaluation Criteria</a> section, push your changes to your branch and open a **PR** that can be merged into your **main** branch of your own GitHub repository.
-- Deploy your app into a hosting service such as Netlify, Firebase, Heroku, GitHub Pages, etc.
-- Share the links of both your PR and your application to your mentor
 
 ## Deliverable 2
 
@@ -159,11 +163,6 @@ In this assignment, you will continue working on your Ecommerce Store. It should
 
 - Emulate loading state for the Products Grid. You should show a loader component immediately after you navigate to the Product List Page and 2 seconds after that, you should remove that loader and show all the products from the mock file (20 points)
 
-### Submitting your Deliverable
-
-- Once you’ve covered all the [requirements specified above](#requirements-1) and completed all the bullets on the [Evaluation Criteria](#evaluation-criteria-1) section, push your changes to your branch and **open a PR that can be merged into your main branch of your own GitHub repository**.
-- Deploy your app into a hosting service such as Netlify, Firebase, Heroku, GitHub Pages, etc.
-- Share the links of both your PR and your application to your mentor
 
 ## Deliverable 3
 
@@ -291,11 +290,6 @@ In this assignment you will continue working on your Ecommerce Store. It should 
 - Loading indicator appears on all the components that consume an API (10 points)
 - PropTypes are implemented correctly for all your components (10 points)
 
-### Submitting your Deliverable
-
-- Once you’ve covered all the requirements specified above and completed all the bullets on the Evaluation Criteria section, push your changes to your branch and open a PR that can be merged into your main branch of your own GitHub repository.
-- Deploy your app into a hosting service such as Netlify, Firebase, Heroku, GitHub Pages, etc.
-- Share the links of both your PR and your application to your mentor
 
 ## Deliverable 4
 
@@ -373,12 +367,6 @@ In this assignment, you will continue working on your Ecommerce Store. It should
 - Error Boundaries are applied correctly at least for 1 component within the app (15 points)
 - useMemo and useCallback hooks are implemented correctly to improve performance if needed (20 points)
 
-### Submitting your Deliverable
-
-- Once you’ve covered all the requirements specified above and completed all the bullets on the Evaluation Criteria section, push your changes to your branch and **open a PR that can be merged into your main branch of your own GitHub repository.**
-- Deploy your app into a hosting service such as Netlify, Firebase, Heroku, GitHub Pages, etc.
-- Share the links of both your PR and your application to your mentor
-
 ## Final Deliverable
 
 **Related topics:** Static Analysis Code, Jest and React Testing Library
@@ -448,9 +436,3 @@ In this final assignment, you will add automated tests to the current features t
 - Test cases for **Product Detail Page** (25 points)
 - Test cases for **Search Results Page** (10 points)
 - Test cases for **Shopping Cart Page** (40 points)
-
-### Submitting your Deliverable
-
-- Once you’ve covered all the requirements specified above and completed all the bullets on the Evaluation Criteria section, push your changes to your branch and **open a PR that can be merged into your main branch of your own GitHub repository.**
-- Deploy your app into a hosting service such as Netlify, Firebase, Heroku, GitHub Pages, etc.
-- Share the links of both your PR and your application to your mentor
