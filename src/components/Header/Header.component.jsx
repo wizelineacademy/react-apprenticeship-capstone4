@@ -1,17 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiShoppingCart } from 'react-icons/fi';
+import { BiSearch } from 'react-icons/bi';
 import logo from '../../logo.svg';
+import { HeaderContainer, LogoName, SearchBar } from './StyledHeader';
 
 function Header() {
+  const [searchText, setSearchText] = useState('');
+
   return (
-    <div>
-      <div>
-        <img src={logo} alt="logo" width="50" height="50" />
+    <HeaderContainer>
+      <LogoName>
+        <img src={logo} alt="logo" width="30" height="30" />
         <h1>Ecommerce Store</h1>
-      </div>
-      <input type="search" name="" id="" />
+      </LogoName>
+      <SearchBar>
+        <BiSearch />
+        <input
+          type="search"
+          value={searchText}
+          placeholder="Search"
+          onChange={(e) => setSearchText(e.target.value)}
+        />
+      </SearchBar>
       <FiShoppingCart />
-    </div>
+    </HeaderContainer>
   );
 }
 
