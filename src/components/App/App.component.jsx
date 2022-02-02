@@ -1,6 +1,7 @@
-import logo from './logo.svg';
+import React from 'react';
+import logo from '../../logo.svg';
 import './App.css';
-import { useFeaturedBanners } from './utils/hooks/useFeaturedBanners';
+import { useFeaturedBanners } from '../../utils/hooks/useFeaturedBanners';
 
 function App() {
   const { data, isLoading } = useFeaturedBanners();
@@ -8,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className='App-header'>
+      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
