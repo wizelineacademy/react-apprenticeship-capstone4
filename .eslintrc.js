@@ -24,7 +24,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-    'prettier/prettier': ['error', { singleQuote: true }],
+    'prettier/prettier': ['error', { singleQuote: true }, { endOfLine: 'auto' }],
     'import/prefer-default-export': 'off',
     'no-restricted-exports': 'off',
   },
