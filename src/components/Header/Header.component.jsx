@@ -5,7 +5,10 @@ import logo from '../../logo.svg';
 function Header() {
   return (
     <div>
-      <img src={logo} alt="logo" width="50" height="50" />
+      <div>
+        <img src={logo} alt="logo" width="50" height="50" />
+        <h1>Ecommerce Store</h1>
+      </div>
       <input type="search" name="" id="" />
       <FiShoppingCart />
     </div>
