@@ -16,6 +16,7 @@ export const HeaderContainer = styled.div`
   padding: 0 5%;
   position: fixed;
   top: 0;
+  z-index: 50;
 `;
 
 export const LogoName = styled.div`
