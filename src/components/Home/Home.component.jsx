@@ -8,7 +8,7 @@ import Slider from '../Slider';
 import Carousel from '../Carousel';
 import Grid from '../Grid';
 
-import { HomeContainer } from '../StyledComponents/StyledComponentsList';
+import { HomeContainer } from './StyledHome';
 
 function Home() {
   return (

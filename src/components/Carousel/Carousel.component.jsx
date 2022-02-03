@@ -10,8 +10,7 @@ function Carousel({ carouselItems }) {
             key={item.id}
             src={item.data.mainimage.url}
             alt={item.data.mainimage.alt}
-            width="50px"
-            height="50px"
+            width="200px"
           />
         ))}
       </ul>

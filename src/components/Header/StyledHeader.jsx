@@ -1,6 +1,8 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const greyColor = '#f3f3f3';
+const light = '#fff';
+const highlightPink = '#ea4c8966';
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -8,9 +10,12 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  height: 80px;
+  background-color: ${light};
+  height: 100px;
   width: 90%;
   padding: 0 5%;
+  position: fixed;
+  top: 0;
 `;
 
 export const LogoName = styled.div`
@@ -34,7 +39,7 @@ export const SearchBar = styled.div`
   width: 30%;
   &:hover {
     background-color: white;
-    border: solid 2px #ea4c8966;
+    border: solid 2px ${highlightPink};
   }
   input[type='search'] {
     background-color: transparent;
