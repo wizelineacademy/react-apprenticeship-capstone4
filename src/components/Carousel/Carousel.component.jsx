@@ -5,41 +5,23 @@ function Carousel({ carouselItems }) {
   // eslint-disable-next-line react/no-unstable-nested-components
   function CarouselList() {
     return (
-      <div>
-        <h3>Living Room</h3>
-        <ul>
-          {carouselItems.map(
-            (item) =>
-              item.tags[0] === 'Living Room' && (
-                <ItemContainer key={item.id}>
-                  <img
-                    src={item.data.mainimage.url}
-                    alt={item.data.mainimage.alt}
-                  />
-                </ItemContainer>
-              )
-          )}
-        </ul>
-        <h3>Bedroom</h3>
-        <ul>
-          {carouselItems.map(
-            (item) =>
-              item.tags[0] === 'Bedroom' && (
-                <ItemContainer key={item.id}>
-                  <img
-                    src={item.data.mainimage.url}
-                    alt={item.data.mainimage.alt}
-                  />
-                </ItemContainer>
-              )
-          )}
-        </ul>
-      </div>
+      <ul>
+        {carouselItems.map((item) => (
+          <ItemContainer key={item.id}>
+            <img
+              src={item.data.main_image.url}
+              alt={item.data.main_image.alt}
+            />
+            <p>{item.data.name}</p>
+            {/* Todo: el mock file que cada componente esta utilizando es el incorrecto, checa las especificaicones del proyecto para que veas cual es el indicado */}
+          </ItemContainer>
+        ))}
+      </ul>
     );
   }
   return (
     <CarouselContainer>
-      {/* Nota: Esto es solo para referencia, el unico h2 deberia ser el de Categories */}
+      {/* Nota: Esto es solo para referencia, el unico h2 deberia ser el de "Categories" */}
       <h2>Carousel/Grid:</h2>
       <h2>Categories</h2>
       <CarouselList />

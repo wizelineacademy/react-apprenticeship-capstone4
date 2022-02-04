@@ -1,8 +1,8 @@
 import React from 'react';
 
 import BannersDataUs from '../../mocks/en-us/featured-banners.json';
-import ProductsDataUs from '../../mocks/en-us/featured-products.json';
 import CategoriesDataUs from '../../mocks/en-us/product-categories.json';
+import ProductsDataUs from '../../mocks/en-us/featured-products.json';
 
 import Slider from '../Slider';
 import Carousel from '../Carousel';
@@ -15,9 +15,9 @@ function Home() {
     <HomeContainer>
       <Slider sliderItems={BannersDataUs.results} />
       <br />
-      <Carousel carouselItems={ProductsDataUs.results} />
+      <Carousel carouselItems={CategoriesDataUs.results} />
       <br />
-      <Grid gridItems={CategoriesDataUs.results} />
+      <Grid gridItems={ProductsDataUs.results} />
     </HomeContainer>
   );
 }
