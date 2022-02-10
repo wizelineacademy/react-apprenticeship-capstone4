@@ -1,16 +1,34 @@
 import React from 'react';
-import './navbar.styles.css';
 import logo from '../../assets/logo.png';
+import { useRouterContext } from '../../providers/Router.provider';
+import {
+  Header,
+  HeaderCart,
+  HeaderCartItem,
+  HeaderLogo,
+  HeaderSearch,
+} from './themes/navbar.styles';
 function Navbar() {
+  const {
+    router: { navigate },
+  } = useRouterContext();
+  const handleButton = () => {
+    navigate('/home', navigate);
+  };
   return (
-    <nav className="navbar-container">
-      <img role="logo" className="navbar-logo" src={logo} alt="Logo" />
-      <input className="navbar-search" placeholder=" Search" />
-      <a className="navbar-cart" href="/auth/login">
+    <Header>
+      <HeaderLogo
+        data-testid="logo"
+        onClick={handleButton}
+        src={logo}
+        alt="Logo"
+      />
+      <HeaderSearch placeholder=" Search" />
+      <HeaderCart>
         <i className="fas fa-shopping-cart"></i>
-        <label className="navbar-cart-items">3</label>
-      </a>
-    </nav>
+        <HeaderCartItem>3</HeaderCartItem>
+      </HeaderCart>
+    </Header>
   );
 }
 

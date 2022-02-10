@@ -1,19 +1,21 @@
-.navbar-container {
+import styled from 'styled-components';
+
+export const Header = styled.nav`
   position: fixed;
   display: flex;
   z-index: 2;
   justify-content: space-between;
   align-items: center;
   background: white;
-  width: 100vw; 
-}
+  width: 100vw;
+`;
 
-.navbar-logo {
+export const HeaderLogo = styled.img`
   height: 90px;
   width: 90px;
-}
+`;
 
-.navbar-search {
+export const HeaderSearch = styled.input`
   background-color: white;
   color: black;
   width: 310px;
@@ -23,9 +25,14 @@
   border-color: rgb(209, 209, 209);
   border-radius: 8px;
   margin: 8px;
-}
 
-.navbar-cart {
+  @media (max-width: 425px) {
+    margin-top: 16px;
+    margin-right: 16px;
+  }
+`;
+
+export const HeaderCart = styled.a`
   background-color: black;
   display: flex;
   align-items: center;
@@ -34,9 +41,14 @@
   border-radius: 24px;
   width: 72px;
   padding: 8px;
-}
 
-.navbar-cart-items {
+  @media (max-width: 425px) {
+    margin-top: 16px;
+    margin-right: 16px;
+  }
+`;
+
+export const HeaderCartItem = styled.label`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,15 +57,4 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-}
-
-@media (max-width: 425px) {
-  .navbar-content {
-    justify-content: center;
-  }
-
-  .navbar-search, .navbar-cart {
-    margin-top: 16px;
-    margin-right: 16px;
-  }
-}
+`;
