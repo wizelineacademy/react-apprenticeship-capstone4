@@ -11,7 +11,6 @@ import Pagination from '../components/Pagination/Pagination.component';
 
 function ProductList() {
   useFeaturedCategories();
-  console.log(useSelector((state) => state));
   const { page } = useSelector((state) => state.page);
   useProducts(page);
   const { filtered } = useSelector((state) => state.products);

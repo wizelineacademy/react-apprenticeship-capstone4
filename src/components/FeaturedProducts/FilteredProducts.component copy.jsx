@@ -9,7 +9,6 @@ import { useSelector } from 'react-redux';
 import NoProducts from '../Alerts/NoProducts.component';
 
 function FilteredProducts() {
-  console.log(useSelector((state) => state));
   const { filtered } = useSelector((state) => state.products);
   const products = Object.values(filtered).flat();
   const loading = false;
