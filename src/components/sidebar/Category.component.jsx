@@ -1,32 +1,27 @@
 import React, { useState } from 'react';
-import { addCategory, removeCategory } from '../../actions/products';
-import { finishLoading, startLoading } from '../../actions/ui';
-import { useProductsContext } from '../../providers/Products.provider';
+import { addCategory, removeProductsByCategory } from '../../actions/products';
 import { CategoryLi, CategoryLiActive } from './themes/category.style';
+import { useDispatch } from 'react-redux';
 
-function Category({ category }) {
+function Category({ id, category }) {
+  const dispatch = useDispatch();
   const [active, setActive] = useState(false);
-  const { dispatch, products, uiDispatch } = useProductsContext();
   const handleButtonAdd = () => {
-    setActive((prev) => !prev);
-    uiDispatch(startLoading());
+    //setActive((prev) => !prev);
     setTimeout(() => {
-      uiDispatch(finishLoading());
-      dispatch(addCategory(category, products));
+      dispatch(addCategory(id, category));
+      setActive((prev) => !prev);
     }, 2000);
   };
-
   const handleButtonRemove = () => {
+    //setActive((prev) => !prev);
     setActive((prev) => !prev);
-    uiDispatch(finishLoading());
-    dispatch(removeCategory(category.category));
+    dispatch(removeProductsByCategory(category));
   };
   return active ? (
-    <CategoryLiActive onClick={handleButtonRemove}>
-      {category.category}
-    </CategoryLiActive>
+    <CategoryLiActive onClick={handleButtonRemove}>{category}</CategoryLiActive>
   ) : (
-    <CategoryLi onClick={handleButtonAdd}>{category.category}</CategoryLi>
+    <CategoryLi onClick={handleButtonAdd}>{category}</CategoryLi>
   );
 }
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Header = styled.nav`
   position: fixed;
@@ -8,6 +9,11 @@ export const Header = styled.nav`
   align-items: center;
   background: white;
   width: 100vw;
+`;
+
+export const HeaderLogoLink = styled(Link)`
+  height: 90px;
+  width: 90px;
 `;
 
 export const HeaderLogo = styled.img`
@@ -32,7 +38,7 @@ export const HeaderSearch = styled.input`
   }
 `;
 
-export const HeaderCart = styled.a`
+export const HeaderCart = styled(Link)`
   background-color: black;
   display: flex;
   align-items: center;

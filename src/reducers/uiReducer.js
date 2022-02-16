@@ -1,6 +1,10 @@
 import { types } from '../types/types';
 
-export const uiReducer = (state, action) => {
+const initialState = {
+  loading: false,
+  msgError: null,
+};
+export const uiReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.uiSetError:
       return {
@@ -21,7 +25,6 @@ export const uiReducer = (state, action) => {
       };
 
     case types.uiFinishLoading:
-      console.log(state);
       return {
         ...state,
         loading: false,

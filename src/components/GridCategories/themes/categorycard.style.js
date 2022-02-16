@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const CCContainer = styled.div`
   background: black;
@@ -10,11 +11,9 @@ export const CCContainer = styled.div`
 `;
 
 export const CCImage = styled.img`
-  border-radius: 16px;
   height: 300px;
   width: 400px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-radius: 16px 0;
 
   @media (max-width: 425px) {
     height: 300px;
@@ -22,15 +21,11 @@ export const CCImage = styled.img`
   }
 `;
 
-export const CCTitle = styled.div`
+export const CCTitle = styled(Link)`
+  display: flex;
+  justify-content: center;
   background-color: black;
   border-radius: 16px;
   padding: 8px;
   font-family: 'lobster', cursive;
-
-  @media (max-width: 425px) {
-    background-color: black;
-    border-radius: 16px;
-    padding: 8px;
-  }
 `;

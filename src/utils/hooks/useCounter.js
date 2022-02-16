@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const useCounter = (actualindex, totalPages) => {
+export const useCounter = (actualindex = 1, totalPages) => {
   const [index, setIndex] = useState(actualindex); // 10
 
   const reset = () => {

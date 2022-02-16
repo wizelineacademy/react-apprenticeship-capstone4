@@ -1,11 +1,21 @@
 import { types } from '../types/types';
 
-export const addCategory = (category, products) => ({
+export const addCategory = (id, category) => ({
   type: types.addCategory,
-  payload: { category, products },
+  payload: { id, category },
 });
 
-export const removeCategory = (category) => ({
-  type: types.removeCategory,
+export const removeProductsByCategory = (category) => ({
+  type: types.removeProducts,
   payload: category,
+});
+
+export const loadProducts = (products) => ({
+  type: types.loadProducts,
+  payload: products,
+});
+
+export const resultsProducts = (products) => ({
+  type: types.resultsProducts,
+  payload: products,
 });

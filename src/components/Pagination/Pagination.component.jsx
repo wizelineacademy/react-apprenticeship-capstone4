@@ -1,26 +1,30 @@
-import { page, total_pages } from '../../mocks/en-us/featured-products.json';
-import { useProductsContext } from '../../providers/Products.provider';
-import { useCounter } from '../../utils/hooks/useCounter';
-import {
-  ButtonLeft,
-  ButtonRight,
-  Index,
-  PaginationContainer,
-} from './themes/pagination.style';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { decrementPage, incrementPage } from '../../actions/page';
+import { Button, Index, PaginationContainer } from './themes/pagination.style';
 function Pagination() {
-  const { index, increment, decrement } = useCounter(page, total_pages);
-  const { state } = useProductsContext();
-  const products = Object.values(state).flat();
+  const dispatch = useDispatch();
+  const { page } = useSelector((state) => state.page);
+  const { productsGrid } = useSelector((state) => state.products);
+
+  const handleIncrement = () => {
+    dispatch(incrementPage(page));
+  };
+
+  const handleDecrement = () => {
+    dispatch(decrementPage(page));
+  };
+
   return (
-    products.length > 0 && (
+    productsGrid.length > 0 && (
       <PaginationContainer>
-        <ButtonLeft onClick={decrement}>
+        <Button onClick={handleDecrement}>
           <i className="fas fa-arrow-left"></i>
-        </ButtonLeft>
-        <Index>{index}</Index>
-        <ButtonRight onClick={increment}>
+        </Button>
+        <Index>{page}</Index>
+        <Button onClick={handleIncrement}>
           <i className="fas fa-arrow-right"></i>
-        </ButtonRight>
+        </Button>
       </PaginationContainer>
     )
   );

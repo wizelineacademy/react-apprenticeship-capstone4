@@ -1,29 +1,32 @@
 import React from 'react';
 import Footer from '../components/Footer/Footer.component';
 import GridCategories from '../components/GridCategories/GridCategories.component';
-import GridProducts from '../components/GridProducts/GridProducts.component';
-import Products from '../components/GridProducts/Products.component';
+import Products from '../components/FeaturedProducts/Products.component';
 import Slider from '../components/Slider';
-import Navbar from '../components/Ui/Navbar.component';
-import { useRouterContext } from '../providers/Router.provider';
 import './themes/home.style.js';
 import { HomeContainer } from './themes/home.style.js';
 import { Button } from './themes/productList.style';
+import { useHistory } from 'react-router-dom';
+import { useFeaturedCategories } from '../utils/hooks/useFeaturedCategories';
+import { useFeaturedBanners } from '../utils/hooks/useFeaturedBanners';
+import { useFeaturedProducts } from '../utils/hooks/useFeaturedProducts';
+import FeaturedProducts from '../components/FeaturedProducts/FeaturedProducts.component';
+
 function HomePage() {
-  const {
-    router: { navigate },
-  } = useRouterContext();
+  useFeaturedProducts();
+  useFeaturedCategories();
+  useFeaturedBanners();
+  const history = useHistory();
   const handleButton = () => {
-    navigate('/productlist', navigate);
+    history.push('/products');
   };
   return (
     <>
-      <Navbar />
       <HomeContainer>
         <Products />
         <Slider />
         <GridCategories />
-        <GridProducts />
+        <FeaturedProducts />
         <Button data-testid="button" onClick={handleButton}>
           View all products
         </Button>

@@ -1,8 +1,27 @@
 import React from 'react';
-import './themes/productDetail.css';
+import { useParams } from 'react-router-dom';
+import Details from '../components/Details/Details.component';
+import Gallery from '../components/Gallery/Gallery.component';
+import './themes/productDetail.styles';
+import { ProductDetailContainer } from './themes/productDetail.styles';
+import { useProduct } from '../utils/hooks/useProduct';
 
-function ProductDetail () {
-  return <div></div>;
-};
+function ProductDetail() {
+  const { productId } = useParams();
+  useProduct(productId);
+  return (
+    <ProductDetailContainer>
+      <Gallery />
+      <Details />
+    </ProductDetailContainer>
+  );
+}
 
 export default ProductDetail;
+
+//name, price, stock, category -> labels
+//tags list
+//description
+//number input
+//add to cart button
+//table with specifications

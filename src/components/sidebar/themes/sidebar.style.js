@@ -13,3 +13,13 @@ export const Title = styled.div`
   color: white;
   border-radius: 16px;
 `;
+
+export const Clear = styled.div`
+  display: flex;
+  justify-content: center;
+  font-family: 'lobster', cursive;
+  background-color: black;
+  color: white;
+  border-radius: 16px;
+  cursor: pointer;
+`;

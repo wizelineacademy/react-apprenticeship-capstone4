@@ -6,7 +6,6 @@ export const Card = styled.div`
 `;
 
 export const CardTitle = styled.div`
-  color: white;
   font-size: 16px;
   text-align: center;
   border-radius: 16px;

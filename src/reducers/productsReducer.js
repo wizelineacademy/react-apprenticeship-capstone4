@@ -1,36 +1,47 @@
 import { types } from '../types/types';
 
-export const productReducer = (state = {}, action) => {
+const initialState = {
+  isLoading: false,
+  filtered: {},
+  productsGrid: [],
+  results: [],
+};
+export const productReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.addCategory:
-      console.log(action);
       return {
         ...state,
-        [action.payload.category.category]: action.payload.products.filter(
-          (product) => product.idCategory === action.payload.category.id
-        ),
+        filtered: {
+          ...state.filtered,
+          [action.payload.category]: state.productsGrid.filter(
+            (product) => product.idCategory === action.payload.id
+          ),
+        },
       };
-    case types.removeCategory:
-      delete state[action.payload];
+
+    case types.removeProducts:
+      delete state.filtered[action.payload];
       return { ...state };
+
+    case types.loadProducts:
+      return {
+        ...state,
+        productsGrid: action.payload,
+      };
+
+    case types.resultsProducts:
+      return {
+        ...state,
+        results: action.payload,
+      };
+
+    case types.clearFilterCategories:
+      return {
+        ...state,
+        filtered: {},
+      };
+
     default:
       return state;
   }
 };
-/*
-switch (action.type) {
-  case types.archiveNote:
-    return {
-      ...state,
-      [action.payload.id]: action.payload,
-    };
-
-  case types.unarchiveNote:
-    delete state[action.payload];
-    return { ...state };
-
-  default:
-    return state;
-}
-};
-*/

@@ -1,8 +1,16 @@
 import React from 'react';
-import './themes/searchResults.style.css';
+import Pagination from '../components/Pagination/Pagination.component';
+import ProductsList from '../components/ProductsList/ProductsList.component';
+//import ProductList from './ProductListPage.page';
+import { SearchContainer } from './themes/searchResults.style.js';
 
-function SearchResults () {
-  return <div></div>;
-};
+function SearchResults() {
+  return (
+    <SearchContainer>
+      <ProductsList />
+      <Pagination />
+    </SearchContainer>
+  );
+}
 
 export default SearchResults;

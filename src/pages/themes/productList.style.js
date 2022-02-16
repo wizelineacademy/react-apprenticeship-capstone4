@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const ProductListContainer = styled.div`
   display: flex;
+  padding-top: 90px;
 `;
 
 export const Button = styled.button`
