@@ -1,7 +1,6 @@
 import { types } from '../types/types';
 
 const initialState = {
-  isLoading: false,
   filtered: {},
   productsGrid: [],
   results: [],

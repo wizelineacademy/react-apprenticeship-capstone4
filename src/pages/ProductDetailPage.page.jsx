@@ -5,15 +5,19 @@ import Gallery from '../components/Gallery/Gallery.component';
 import './themes/productDetail.styles';
 import { ProductDetailContainer } from './themes/productDetail.styles';
 import { useProduct } from '../utils/hooks/useProduct';
+import AddCartButton from '../components/AddCartButton/AddCartButton.component';
 
 function ProductDetail() {
   const { productId } = useParams();
   useProduct(productId);
   return (
-    <ProductDetailContainer>
-      <Gallery />
-      <Details />
-    </ProductDetailContainer>
+    <>
+      <ProductDetailContainer>
+        <Gallery />
+        <Details />
+      </ProductDetailContainer>
+      <AddCartButton id={productId} />
+    </>
   );
 }
 

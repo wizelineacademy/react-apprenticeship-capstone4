@@ -2,10 +2,12 @@ export const types = {
   addCategory: '[PRODUCTS] Add by category',
   removeProducts: '[PRODUCTS] Remove by category',
   loadProducts: '[PRODUCTS] Load products',
-  resultsProducts: '[Products] results products',
+  resultsProducts: '[Products] Results products',
 
-  uiStartLoading: '[UI] Start loading',
-  uiFinishLoading: '[UI] Finish loading',
+  uiStartProductsLoading: '[UI] Start products loading',
+  uiFinishProductsLoading: '[UI] Finish products loading',
+  uiSetSearchAlert: '[UI] Set products error',
+  uiRemoveSearchAlert: '[UI] Remove products error',
 
   bannerSet: '[BANNER] Set banner',
 
@@ -14,12 +16,16 @@ export const types = {
   activeCategory: '[CATEGORIES] Active category',
   deactiveCategory: '[CATEGORIES] Deactive category',
 
-  setProduct: '[CART] set product',
-  addProduct: '[CART] add to cart',
-  setImagesProduct: '[CART] set images product',
+  setProduct: '[CART] Set product',
+  addToCart: '[CART] Add to cart',
+  changeNumberProductsCart: '[CART] Modify cart',
+  setImagesProduct: '[CART] Set images product',
+  calculateTotalCart: '[CART] Calculate total',
+  calculateTotalProducts: '[CART] Calculate products',
+  deleteProduct: '[CART] Delete product from cart',
 
-  setPage: '[PAGE] set page',
-  setTotalPages: '[PAGE] set total pages',
-  incrementPage: '[PAGE] increment',
-  decrementPage: '[PAGE] decrement',
+  setPage: '[PAGE] Set page',
+  setTotalPages: '[PAGE] Set total pages',
+  incrementPage: '[PAGE] Increment',
+  decrementPage: '[PAGE] Decrement',
 };

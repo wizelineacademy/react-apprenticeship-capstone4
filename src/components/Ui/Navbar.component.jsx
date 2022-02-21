@@ -10,22 +10,28 @@ import {
   HeaderLogo,
   HeaderLogoLink,
   HeaderSearch,
+  Search,
 } from './themes/navbar.styles';
 import { useForm } from '../../utils/hooks/useForm/useForm';
 import { useSearchProducts } from '../../utils/hooks/useSearchProducts';
+import { useDispatch, useSelector } from 'react-redux';
+import { resultsProducts } from '../../actions/products';
 function Navbar() {
   const history = useHistory();
   const location = useLocation();
+  const dispatch = useDispatch();
+  const { numberProducts } = useSelector((state) => state.cart);
   const { q = '' } = queryString.parse(location.search);
   const [{ product }, handleInputChange] = useForm({
     product: q,
   });
-  useSearchProducts(q);
+  const { data } = useSearchProducts(product);
   const handleSearch = (e) => {
     e.preventDefault();
     if (product.trim().length <= 1) {
       return;
     }
+    dispatch(resultsProducts(data));
     history.push('/search');
     history.push(`?q=${product}`);
   };
@@ -34,7 +40,7 @@ function Navbar() {
       <HeaderLogoLink to="/home">
         <HeaderLogo data-testid="logo" src={logo} alt="Logo" />
       </HeaderLogoLink>
-      <form onSubmit={handleSearch}>
+      <form>
         <HeaderSearch
           type="text"
           name="product"
@@ -42,10 +48,11 @@ function Navbar() {
           Search"
           onChange={handleInputChange}
         />
+        <Search onClick={handleSearch}>Search</Search>
       </form>
-      <HeaderCart to="/">
+      <HeaderCart to="/cart">
         <i className="fas fa-shopping-cart"></i>
-        <HeaderCartItem>3</HeaderCartItem>
+        <HeaderCartItem>{numberProducts}</HeaderCartItem>
       </HeaderCart>
     </Header>
   );

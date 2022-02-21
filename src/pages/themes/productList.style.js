@@ -12,7 +12,9 @@ export const Button = styled.button`
   position: relative;
   left: 10%;
   font-family: 'lobster';
-  border-radius: 16px;
+  border-radius: 8px;
+  border-style: solid;
   height: 40px;
   padding: 8px;
+  margin-bottom: 16px;
 `;

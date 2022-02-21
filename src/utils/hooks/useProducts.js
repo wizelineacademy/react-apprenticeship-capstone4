@@ -1,16 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { API_BASE_URL } from '../constants';
 import { useLatestAPI } from './useLatestAPI';
 import { useDispatch } from 'react-redux';
 import { loadProducts } from '../../actions/products';
 import { setPage, setTotalPages } from '../../actions/page';
+import { finishProductsLoading, startProductsLoading } from '../../actions/ui';
 export function useProducts(page) {
   const dispatch = useDispatch();
   const { ref: apiRef, isLoading: isApiMetadataLoading } = useLatestAPI();
-  const [featuredBanners, setFeaturedBanners] = useState(() => ({
-    data: {},
-    isLoading: true,
-  }));
 
   useEffect(() => {
     if (!apiRef || isApiMetadataLoading) {
@@ -20,7 +17,7 @@ export function useProducts(page) {
     const controller = new AbortController();
     async function getFeaturedBanners() {
       try {
-        setFeaturedBanners({ data: {}, isLoading: true });
+        dispatch(startProductsLoading());
         const response = await fetch(
           `${API_BASE_URL}/documents/search?ref=${apiRef}&q=${encodeURIComponent(
             '[[at(document.type, "product")]]'
@@ -50,9 +47,8 @@ export function useProducts(page) {
         dispatch(loadProducts(products));
         dispatch(setPage(data.page));
         dispatch(setTotalPages(data.total_pages));
-        setFeaturedBanners({ data, isLoading: false });
+        dispatch(finishProductsLoading());
       } catch (err) {
-        setFeaturedBanners({ data: {}, isLoading: false });
         console.error(err);
       }
     }
@@ -63,6 +59,4 @@ export function useProducts(page) {
       controller.abort();
     };
   }, [apiRef, isApiMetadataLoading, page]);
-
-  return featuredBanners;
 }

@@ -9,10 +9,19 @@ export const removeError = () => ({
   type: types.uiRemoveError,
 });
 
-export const startLoading = () => ({
-  type: types.uiStartLoading,
+export const startProductsLoading = () => ({
+  type: types.uiStartProductsLoading,
 });
 
-export const finishLoading = () => ({
-  type: types.uiFinishLoading,
+export const finishProductsLoading = () => ({
+  type: types.uiFinishProductsLoading,
+});
+
+export const startSearchAlert = (msg = 'Try searching with another word') => ({
+  type: types.uiSetSearchAlert,
+  payload: msg,
+});
+
+export const finishSearchAlert = () => ({
+  type: types.uiRemoveSearchAlert,
 });

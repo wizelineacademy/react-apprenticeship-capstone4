@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import AddCartButton from '../AddCartButton/AddCartButton.component';
 import Table from '../Table/Table.component';
 import './themes/details.styles';
 import {
@@ -20,7 +19,6 @@ function Details() {
       <Price>${price}</Price>
       {!!tags && tags.map((tag) => <label key={tag}>{tag}</label>)}
       <label>{stock}</label>
-      <AddCartButton />
       <Table />
     </DetailsContainer>
   );

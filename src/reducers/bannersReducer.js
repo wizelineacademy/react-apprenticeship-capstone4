@@ -10,6 +10,7 @@ export const bannersReducer = (state = initialState, action) => {
         ...state,
         banners: action.payload,
       };
+
     default:
       return state;
   }

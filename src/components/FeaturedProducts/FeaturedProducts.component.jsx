@@ -11,16 +11,14 @@ function FeaturedProducts() {
   const { productsGrid: products } = useSelector((state) => state.products);
   const loading = false;
   return (
-    <>
-      <FeaturedProductsContainer>
-        {loading && <Loading>Loading</Loading>}
-        <ProductsContainer>
-          {products.map((product) => (
-            <Product key={product.id} {...product} />
-          ))}
-        </ProductsContainer>
-      </FeaturedProductsContainer>
-    </>
+    <FeaturedProductsContainer>
+      {loading && <Loading>Loading</Loading>}
+      <ProductsContainer>
+        {products.map((product) => (
+          <Product key={product.id} {...product} />
+        ))}
+      </ProductsContainer>
+    </FeaturedProductsContainer>
   );
 }
 

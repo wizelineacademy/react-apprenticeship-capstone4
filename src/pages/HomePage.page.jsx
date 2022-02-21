@@ -11,6 +11,8 @@ import { useFeaturedCategories } from '../utils/hooks/useFeaturedCategories';
 import { useFeaturedBanners } from '../utils/hooks/useFeaturedBanners';
 import { useFeaturedProducts } from '../utils/hooks/useFeaturedProducts';
 import FeaturedProducts from '../components/FeaturedProducts/FeaturedProducts.component';
+import { useSelector } from 'react-redux';
+import Loading from '../components/Alerts/Loading.component';
 
 function HomePage() {
   useFeaturedProducts();
@@ -20,19 +22,19 @@ function HomePage() {
   const handleButton = () => {
     history.push('/products');
   };
+  const { products } = useSelector((state) => state.ui);
   return (
-    <>
-      <HomeContainer>
-        <Products />
-        <Slider />
-        <GridCategories />
-        <FeaturedProducts />
-        <Button data-testid="button" onClick={handleButton}>
-          View all products
-        </Button>
-        <Footer />
-      </HomeContainer>
-    </>
+    <HomeContainer>
+      <Products />
+      <Slider />
+      <GridCategories />
+      {products.loading && <Loading />}
+      <FeaturedProducts />
+      <Button data-testid="button" onClick={handleButton}>
+        View all products
+      </Button>
+      <Footer />
+    </HomeContainer>
   );
 }
 

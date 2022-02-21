@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { resultsProducts } from '../../actions/products';
+import { finishSearchAlert, startSearchAlert } from '../../actions/ui';
+//import { resultsProducts } from '../../actions/products';
 import { API_BASE_URL } from '../constants';
 import { useLatestAPI } from './useLatestAPI';
 
@@ -9,7 +10,7 @@ export function useSearchProducts(magicWord) {
   const dispatch = useDispatch();
   const { ref: apiRef, isLoading: isApiMetadataLoading } = useLatestAPI();
   const [featuredBanners, setFeaturedBanners] = useState(() => ({
-    data: {},
+    data: [],
     isLoading: true,
   }));
 
@@ -22,7 +23,7 @@ export function useSearchProducts(magicWord) {
 
     async function getFeaturedBanners() {
       try {
-        setFeaturedBanners({ data: {}, isLoading: true });
+        setFeaturedBanners({ data: [], isLoading: true });
         const response = await fetch(
           `${API_BASE_URL}/documents/search?ref=${apiRef}&q=${encodeURIComponent(
             '[[at(document.type, "product")]]'
@@ -51,11 +52,10 @@ export function useSearchProducts(magicWord) {
             href: result.href,
           };
         });
-        dispatch(resultsProducts(products));
-        setFeaturedBanners({ data, isLoading: false });
+        setFeaturedBanners({ data: products, isLoading: false });
+        dispatch(finishSearchAlert());
       } catch (err) {
-        setFeaturedBanners({ data: {}, isLoading: false });
-        console.error(err);
+        dispatch(startSearchAlert());
       }
     }
 
@@ -64,7 +64,7 @@ export function useSearchProducts(magicWord) {
     return () => {
       controller.abort();
     };
-  }, [apiRef, isApiMetadataLoading]);
+  }, [apiRef, isApiMetadataLoading, magicWord]);
 
   return featuredBanners;
 }

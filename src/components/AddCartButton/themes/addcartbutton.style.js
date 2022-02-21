@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const AddCartContainer = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  margin-right: 200px;
 `;
 
 export const NumberProducts = styled.input`
@@ -13,9 +13,10 @@ export const NumberProducts = styled.input`
   border-style: solid;
   padding: 4px;
   margin-right: 16px;
+  width: 80px;
 `;
 
-export const AddButton = styled.div`
+export const AddButton = styled.button`
   font-family: 'lobster', cursive;
   background-color: black;
   color: white;

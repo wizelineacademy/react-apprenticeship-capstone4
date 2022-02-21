@@ -25,10 +25,3 @@ function Table() {
 }
 
 export default Table;
-
-//name, price, stock, category -> labels
-//tags list
-//description
-//number input
-//add to cart button
-//table with specifications

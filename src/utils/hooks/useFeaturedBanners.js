@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { API_BASE_URL } from '../constants';
 import { useLatestAPI } from './useLatestAPI';
 import { useDispatch } from 'react-redux';
@@ -6,22 +6,15 @@ import { setBanners } from '../../actions/banners';
 export function useFeaturedBanners() {
   const dispatch = useDispatch();
   const { ref: apiRef, isLoading: isApiMetadataLoading } = useLatestAPI();
-  const [featuredBanners, setFeaturedBanners] = useState(() => ({
-    data: {},
-    isLoading: true,
-  }));
 
   useEffect(() => {
     if (!apiRef || isApiMetadataLoading) {
       return () => {};
     }
-
     const controller = new AbortController();
 
     async function getFeaturedBanners() {
       try {
-        setFeaturedBanners({ data: {}, isLoading: true });
-
         const response = await fetch(
           `${API_BASE_URL}/documents/search?ref=${apiRef}&q=${encodeURIComponent(
             '[[at(document.type, "banner")]]'
@@ -45,9 +38,7 @@ export function useFeaturedBanners() {
           };
         });
         dispatch(setBanners(banners));
-        setFeaturedBanners({ data: banners, isLoading: false });
       } catch (err) {
-        setFeaturedBanners({ data: {}, isLoading: false });
         console.error(err);
       }
     }
@@ -58,6 +49,4 @@ export function useFeaturedBanners() {
       controller.abort();
     };
   }, [apiRef, isApiMetadataLoading]);
-
-  return featuredBanners;
 }

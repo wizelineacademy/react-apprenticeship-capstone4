@@ -3,6 +3,7 @@ import { API_BASE_URL } from '../constants';
 import { useLatestAPI } from './useLatestAPI';
 import { useDispatch } from 'react-redux';
 import { loadProducts } from '../../actions/products';
+import { finishProductsLoading, startProductsLoading } from '../../actions/ui';
 //import { setCategories } from '../../actions/categories';
 export function useFeaturedProducts() {
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ export function useFeaturedProducts() {
     if (!apiRef || isApiMetadataLoading) {
       return () => {};
     }
-
+    dispatch(startProductsLoading());
     const controller = new AbortController();
 
     async function getFeaturedBanners() {
@@ -50,6 +51,7 @@ export function useFeaturedProducts() {
         });
 
         dispatch(loadProducts(products));
+        dispatch(finishProductsLoading());
         setFeaturedBanners({ data, isLoading: false });
       } catch (err) {
         setFeaturedBanners({ data: {}, isLoading: false });

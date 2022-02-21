@@ -24,7 +24,7 @@ export const HeaderLogo = styled.img`
 export const HeaderSearch = styled.input`
   background-color: white;
   color: black;
-  width: 310px;
+  width: 308px;
   height: 40px;
   outline: none;
   border-style: solid;
@@ -63,4 +63,13 @@ export const HeaderCartItem = styled.label`
   width: 24px;
   height: 24px;
   border-radius: 50%;
+`;
+
+export const Search = styled.button`
+  background-color: black;
+  color: white;
+  font-family: 'lobster', cursive;
+  border-radius: 8px;
+  border-style: solid;
+  cursor: pointer;
 `;
