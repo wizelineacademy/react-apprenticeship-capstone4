@@ -10,7 +10,7 @@ function Slider() {
   const { banners } = useSelector((state) => state.banners);
 
   return (
-    <Slide className="slider-container" {...properties}>
+    <Slide data-testid="slider" className="slider-container" {...properties}>
       {banners.map((banner) => (
         <SliderCard key={banner.id} banner={banner} />
       ))}

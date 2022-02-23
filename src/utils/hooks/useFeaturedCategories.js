@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { API_BASE_URL } from '../constants';
 import { useLatestAPI } from './useLatestAPI';
 import { useDispatch } from 'react-redux';
@@ -6,10 +6,6 @@ import { setCategories } from '../../actions/categories';
 export function useFeaturedCategories() {
   const dispatch = useDispatch();
   const { ref: apiRef, isLoading: isApiMetadataLoading } = useLatestAPI();
-  const [featuredBanners, setFeaturedBanners] = useState(() => ({
-    data: {},
-    isLoading: true,
-  }));
 
   useEffect(() => {
     if (!apiRef || isApiMetadataLoading) {
@@ -20,8 +16,6 @@ export function useFeaturedCategories() {
 
     async function getFeaturedBanners() {
       try {
-        setFeaturedBanners({ data: {}, isLoading: true });
-
         const response = await fetch(
           `${API_BASE_URL}/documents/search?ref=${apiRef}&q=${encodeURIComponent(
             '[[at(document.type, "category")]]'
@@ -46,10 +40,8 @@ export function useFeaturedCategories() {
           };
         });
         dispatch(setCategories(categories));
-        setFeaturedBanners({ data, isLoading: false });
       } catch (err) {
-        setFeaturedBanners({ data: {}, isLoading: false });
-        console.error(err);
+        console.log(err);
       }
     }
 
@@ -59,6 +51,4 @@ export function useFeaturedCategories() {
       controller.abort();
     };
   }, [apiRef, isApiMetadataLoading]);
-
-  return featuredBanners;
 }

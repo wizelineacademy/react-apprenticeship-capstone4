@@ -27,7 +27,7 @@ function HomePage() {
     <HomeContainer>
       <Products />
       <Slider />
-      <GridCategories />
+      <GridCategories data-testid="categories" />
       {products.loading && <Loading />}
       <FeaturedProducts />
       <Button data-testid="button" onClick={handleButton}>

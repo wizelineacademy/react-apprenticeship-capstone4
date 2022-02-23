@@ -14,15 +14,18 @@ function Pagination() {
   const handleDecrement = () => {
     dispatch(decrementPage(page));
   };
-
   return (
     productsGrid.length > 0 && (
       <PaginationContainer>
-        <Button onClick={handleDecrement}>
+        <Button
+          data-testid="decrement"
+          onClick={handleDecrement}
+          disabled={page === 1}
+        >
           <i className="fas fa-arrow-left"></i>
         </Button>
         <Index>{page}</Index>
-        <Button onClick={handleIncrement}>
+        <Button data-testid="increment" onClick={handleIncrement}>
           <i className="fas fa-arrow-right"></i>
         </Button>
       </PaginationContainer>

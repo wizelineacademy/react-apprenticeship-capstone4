@@ -10,11 +10,11 @@ import {
 function ProductCard({ id, name, idCategory, alt, image, price }) {
   const category = filterByCategory(idCategory);
   return (
-    <CardContainer to={`/product/${id}`}>
+    <CardContainer data-testid="product" to={`/product/${id}`}>
       <CardImage src={image} alt={alt} />
       <CardInfo>
         <CardTitle>{name}</CardTitle>
-        <label>{category}</label>
+        <label data-testid="category-product">{category}</label>
         <CardPrice>${price}</CardPrice>
       </CardInfo>
     </CardContainer>

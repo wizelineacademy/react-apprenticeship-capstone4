@@ -14,7 +14,7 @@ function Details() {
   } = useSelector((state) => state.cart);
   return (
     <DetailsContainer>
-      <Titulo>{name}</Titulo>
+      <Titulo data-testid="name-product">{name}</Titulo>
       <Description>{shortDescription}</Description>
       <Price>${price}</Price>
       {!!tags && tags.map((tag) => <label key={tag}>{tag}</label>)}

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
-import { Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
-import 'swiper/modules/pagination/pagination.min.css';
+import { Pagination } from 'swiper';
 import './styles.css';
 import { useSelector } from 'react-redux';
 //import { filterImages } from '../../utils/selectors/filterImages';
@@ -13,11 +13,7 @@ function Gallery() {
     <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
       {productImages.map((image) => (
         <SwiperSlide key={image.url}>
-          <img
-            src={image.url}
-            width={image.width / 2}
-            height={image.height / 2}
-          />
+          <img src={image.url} width={200} />
         </SwiperSlide>
       ))}
     </Swiper>

@@ -49,7 +49,7 @@ export function useProducts(page) {
         dispatch(setTotalPages(data.total_pages));
         dispatch(finishProductsLoading());
       } catch (err) {
-        console.error(err);
+        console.log(err);
       }
     }
 

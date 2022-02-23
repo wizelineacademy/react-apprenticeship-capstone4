@@ -20,8 +20,7 @@ export function useLatestAPI() {
 
         setApiMetadata({ ref, isLoading: false });
       } catch (err) {
-        setApiMetadata({ ref: null, isLoading: false });
-        console.error(err);
+        console.log(err);
       }
     }
 

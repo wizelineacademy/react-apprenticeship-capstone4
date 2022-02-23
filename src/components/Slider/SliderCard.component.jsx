@@ -3,11 +3,13 @@ import './themes/slidercard.style.js';
 function SliderCard({ banner }) {
   return (
     <div
+      data-testid="slider-card"
       className="slidercard-container"
       style={{ width: `${banner.width / 2}` }}
     >
       <img
         className="slidercard-image"
+        data-testid="slider-image"
         src={banner.imageUrl}
         alt=""
         width={banner.width / 2}

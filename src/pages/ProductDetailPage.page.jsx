@@ -9,6 +9,7 @@ import AddCartButton from '../components/AddCartButton/AddCartButton.component';
 
 function ProductDetail() {
   const { productId } = useParams();
+  console.log(productId);
   useProduct(productId);
   return (
     <>
@@ -16,16 +17,9 @@ function ProductDetail() {
         <Gallery />
         <Details />
       </ProductDetailContainer>
-      <AddCartButton id={productId} />
+      <AddCartButton data-testid="button-details" id={productId} />
     </>
   );
 }
 
 export default ProductDetail;
-
-//name, price, stock, category -> labels
-//tags list
-//description
-//number input
-//add to cart button
-//table with specifications

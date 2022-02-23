@@ -19,9 +19,16 @@ function Category({ id, category }) {
     dispatch(removeProductsByCategory(category));
   };
   return active ? (
-    <CategoryLiActive onClick={handleButtonRemove}>{category}</CategoryLiActive>
+    <CategoryLiActive
+      data-testid="category-sidebar"
+      onClick={handleButtonRemove}
+    >
+      {category}
+    </CategoryLiActive>
   ) : (
-    <CategoryLi onClick={handleButtonAdd}>{category}</CategoryLi>
+    <CategoryLi data-testid="category-sidebar" onClick={handleButtonAdd}>
+      {category}
+    </CategoryLi>
   );
 }
 
